@@ -42,6 +42,7 @@ class NewsBox extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          // Text
                           modifiedText(
                               color: Colors.blue, size: 15, text: title),
                           SizedBox(height: 5),

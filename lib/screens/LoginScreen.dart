@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news_app_quantom/functions/auth.dart';
 import 'package:news_app_quantom/screens/home_page.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  LoginScreen({Key? key}) : super(key: key);
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+
+
+class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController emailController = TextEditingController();
+
+  TextEditingController passController = TextEditingController();
+  bool login = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -33,19 +45,28 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  const TextField(
+                  TextField(
+                    onChanged: (value) {
+                      print(value);
+                    },
+                    controller: emailController,
                     decoration: InputDecoration(
-                        labelText: "john@gmail.com",
+                        labelText: "Email id:",
                         icon: Icon(
                           Icons.email,
                           color: Colors.red,
                         ),
+                        hintText: "John@gmail.com",
                         labelStyle: TextStyle(fontSize: 20)),
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  const TextField(
+                  TextField(
+                    onChanged: (value) {
+                      print(value);
+                    },
+                    controller: passController,
                     decoration: InputDecoration(
                         icon: Icon(
                           Icons.lock,
@@ -114,10 +135,13 @@ class LoginScreen extends StatelessWidget {
           ),
           Expanded(
               child: InkWell(
-               
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => HomePage()));
+              signin(emailController.text.trim(), passController.text.trim(),
+                  login);
+               Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
             },
             child: Container(
               height: 20,
