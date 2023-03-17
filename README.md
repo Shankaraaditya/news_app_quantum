@@ -1,16 +1,20 @@
 # news_app_quantom
 
-A new Flutter project.
+News App 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Packages Used in the project---
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  google_fonts: ^4.0.3  - to integrated different font styles 
+  
+  http: ^0.13.5 - to manage request and response from web servers
+  
+  cached_network_image: ^3.2.3 - to store fetced images in cache memory so that it does not get lost when user goes back
+                                  
+                                 
+  firebase_auth: ^4.2.10      -- to setup firebase login & signup authentication
+  firebase_core: ^2.7.1       -- to integrate the app with Firebase
+  country_flags: ^1.1.1       -- to show country flags as icons.
+  
+  [quantum_IT.webm](https://user-images.githubusercontent.com/112255788/225943185-955250fa-5d49-44c0-aa6d-5ea3df2adb22.webm)
